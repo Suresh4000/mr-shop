@@ -56,3 +56,4 @@ export async function signOutAdminAction() {
   await supabase.auth.signOut();
   redirect("/admin/login");
 }
+

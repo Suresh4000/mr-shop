@@ -23,3 +23,4 @@ export const categorySchema = z.object({
     .default(0),
   is_published: z.coerce.boolean().default(true),
 });
+

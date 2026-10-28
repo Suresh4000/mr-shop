@@ -1,9 +1,13 @@
+import { connection } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { CategoryList } from "@/components/admin/category-list";
 
 export const instant = false;
 
 export default async function AdminCategoriesPage() {
+  // Opt into request-time rendering (required when Supabase calls use Date.now() internally)
+  await connection();
+
   const supabase = await createClient();
 
   // Fetch all categories sorted by display order

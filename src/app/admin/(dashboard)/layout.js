@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { connection } from "next/server";
 import { requireAdmin } from "@/lib/auth";
 import { signOutAdminAction } from "@/actions/auth";
 
 export const instant = false;
 
 export default async function AdminDashboardLayout({ children }) {
+  await connection();
   const adminUser = await requireAdmin();
 
   return (

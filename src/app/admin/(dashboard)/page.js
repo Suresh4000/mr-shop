@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { connection } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 
 export const instant = false;
 
 export default async function AdminDashboardPage() {
+  await connection();
   const supabase = await createClient();
 
   const [categoriesRes, productsRes, inventoryRes] = await Promise.all([

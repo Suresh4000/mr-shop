@@ -2,7 +2,7 @@
 
 **Estimate:** 5 working days (6 with bulk import)  
 **Dependency:** Phase 2 complete  
-**Status:** Not started  
+**Status:** In progress (Task 3.1 complete, moving to Task 3.2)  
 **Purpose:** Build the admin side of the catalog first so the storefront has real data.
 
 ## Tasks
@@ -40,3 +40,11 @@
 ## Notes for AI assistants
 
 Every server action starts with `requireAdmin()`. Validate input with Zod. Never use client-supplied IDs without checking they exist and are allowed.
+
+## Progress (2026-10-28)
+
+| ID | State | Evidence |
+|---|---|---|
+| 3.1 Admin authentication and `requireAdmin()` | Done | `requireAdmin()` and `verifyAdmin()` guards in `src/lib/auth/`, server actions in `src/actions/auth.js`, `/admin/login` page, `/admin/(dashboard)` protected layout, `scripts/create-admin.mjs` setup script, unit tests in `tests/unit/auth.test.js`. Build and tests pass. |
+| 3.2 Category management | Up next | |
+

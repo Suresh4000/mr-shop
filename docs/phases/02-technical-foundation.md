@@ -54,7 +54,7 @@ Create migrations as files, never by manual dashboard edits. Write RLS tests alo
 | 2.1 Project scaffold | Done locally | `npm run lint`, `npm run test` (4 unit tests) and `npm run build` pass. CI workflow in `.github/workflows/ci.yml`. Private GitHub repo not created yet (needs your account) |
 | 2.2 Supabase and environments | Partly done | Clients in `src/lib/supabase/`, `.env.example` with placeholders. Dev and prod Supabase projects and redirect URLs need your account |
 | 2.3 Database migrations | Done | `supabase/migrations/` (3 files) apply from scratch on Postgres 16 |
-| 2.4 Row Level Security | Done, tested on plain Postgres | `npm run test:db`: 37 checks as anonymous, customer and admin. Run against Supabase local or a dev project before relying on it |
+| 2.4 Row Level Security | Done, tested on plain Postgres | `npm run test:db`: 38 checks as anonymous, customer and admin. Run against Supabase local or a dev project before relying on it |
 | 2.5 Seed script | Done | `supabase/seed.sql`: 4 categories, 8 products, 64 variants with stock, 5 demo pincodes |
 | 2.6 Preview deployment | Not started | Needs hosting account and Supabase project |
 

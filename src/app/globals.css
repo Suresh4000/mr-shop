@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Phase 1 approved palette. Web fonts (Playfair Display, Inter) are wired in Phase 4. */
+:root {
+  --background: #faf7f2;
+  --foreground: #4a1f3d;
+  --accent: #c75b7a;
+  --border: #e8e2da;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}

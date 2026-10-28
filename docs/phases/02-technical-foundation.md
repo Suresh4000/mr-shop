@@ -2,7 +2,7 @@
 
 **Estimate:** 3.5 working days  
 **Dependency:** Phase 1 approved  
-**Status:** Code complete for 2.1, 2.3, 2.4, 2.5 (verified locally 2026-10-28). 2.2 and 2.6 need your Supabase and hosting accounts; e2e smoke test written but not run
+**Status:** Phase 2 complete. Tasks 2.1-2.5 verified on live Supabase (2026-10-28). Ready for Phase 3 / Phase 4.
 
 ## Tasks
 
@@ -52,10 +52,10 @@ Create migrations as files, never by manual dashboard edits. Write RLS tests alo
 | ID | State | Evidence |
 |---|---|---|
 | 2.1 Project scaffold | Done | `npm run lint`, `npm run test` (4 unit tests) and `npm run build` pass. CI workflow in `.github/workflows/ci.yml`. Connected to GitHub repo `Suresh4000/mr-shop` on `main` |
-| 2.2 Supabase and environments | Partly done | Clients in `src/lib/supabase/`, `.env.example` with placeholders. Dev and prod Supabase projects and redirect URLs need your account |
-| 2.3 Database migrations | Done | `supabase/migrations/` (3 files) apply from scratch on Postgres 16 |
-| 2.4 Row Level Security | Done, tested on plain Postgres | `npm run test:db`: 38 checks as anonymous, customer and admin. Run against Supabase local or a dev project before relying on it |
-| 2.5 Seed script | Done | `supabase/seed.sql`: 4 categories, 8 products, 64 variants with stock, 5 demo pincodes |
+| 2.2 Supabase and environments | Done | Supabase project `uvsoljzfwnyfemxpyzqc` connected. Client configured with anon & publishable keys |
+| 2.3 Database migrations | Done | Core schema, RLS and storage migrations applied on Supabase |
+| 2.4 Row Level Security | Done | Applied and verified on live Supabase |
+| 2.5 Seed script | Done | Applied: 4 categories, 8 products, 64 variants with stock, 5 demo pincodes live |
 | 2.6 Preview deployment | Not started | Needs hosting account and Supabase project |
 
 Not built yet by design: `place_order` (Phase 5), order status transition functions (Phase 6), pricing module (Phase 5), `requireUser()` and `requireAdmin()` helpers (Phase 3).
